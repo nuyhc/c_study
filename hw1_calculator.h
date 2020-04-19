@@ -6,19 +6,20 @@
 #include <stdlib.h>
 #include "hw1_error.h"
 
-//  @brief Calculator Header file
-
 /*
-@brief Calculator Struct
+@brief: Calculator Struct
+@param: int data
+@parma: int count
+@param: hw1_error_t error
 */
 typedef struct hw1_calculator_s hw1_calculator_t;
 struct hw1_calculator_s{
-	int data; // < Operand
+	int data;
 	int count;
 	hw1_error_t error;
 };
 
-// Oprerators
+// Operators
 hw1_calculator_t* hw1_calculator_init();
 void hw1_calculator_destroy( hw1_calculator_t *calculator);
 int hw1_calculator_get_count( hw1_calculator_t *calculator);

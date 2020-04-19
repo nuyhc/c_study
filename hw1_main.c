@@ -1,5 +1,11 @@
 #include "hw1_manager.h"
 
+/*
+@brief: The main Process of Manager and Calculator
+@param: int argc
+@param: char** argv
+@return: int -1
+*/
 int main(int argc, char **argv){
 	if( argc != 2){
 		printf("\n(hw1_main) { Wrong Parameter Rule }\n\n");

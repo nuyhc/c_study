@@ -4,7 +4,9 @@
 #include <string.h>
 #include "hw1_calculator.h"
 
-// @brief Calculator Manager
+/*
+@brief: Manager's struct
+*/
 typedef struct hw1_manager_s hw1_manager_t;
 struct hw1_manager_s{
 	char *name;
@@ -12,7 +14,7 @@ struct hw1_manager_s{
 	hw1_error_t error;
 };
 
-// Manager's Operation
+// Operators
 hw1_manager_t* hw1_manager_init();
 void hw1_manager_destroy( hw1_manager_t *manager);
 char* hw1_manager_set_name( hw1_manager_t *manager, char *name);

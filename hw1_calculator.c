@@ -1,5 +1,8 @@
 #include "hw1_calculator.h"
 
+/*
+@brief: Calculator init, allocate Mem
+*/
 hw1_calculator_t* hw1_calculator_init(){
 	hw1_calculator_t *calculator = ( hw1_calculator_t*)malloc( sizeof( hw1_calculator_t*));
 	calculator->data = 0;
@@ -7,12 +10,21 @@ hw1_calculator_t* hw1_calculator_init(){
 	return calculator;
 }
 
+/*
+@brief: Destroy Calculator, returning Mem
+@param: hw_calculator_t* calculator
+*/
 void hw1_calculator_destroy( hw1_calculator_t *calculator){
 	if( calculator){
 		free( calculator);
 	}
 }
 
+/*
+@brief: Get Calculator's count #
+@param: hw1_calculator_t* calculator
+@return: enum error
+*/
 int hw1_calculator_get_count( hw1_calculator_t *calculator){
 	if( calculator){
 		return calculator->count;
@@ -24,6 +36,12 @@ int hw1_calculator_get_count( hw1_calculator_t *calculator){
 	}
 }
 
+/*
+@brief: Plus Calculator's count #
+@param: hw1_calculator_t* calculator
+@return: int count
+@return: enum error
+*/
 int hw1_calculator_plus_count( hw1_calculator_t *calculator){
 	if( calculator){
 		if( hw1_calculator_get_count( calculator) > CAL_MAX_NUM){
@@ -42,6 +60,12 @@ int hw1_calculator_plus_count( hw1_calculator_t *calculator){
 	}
 }
 
+/*
+@brief: Minus Calculator's count #
+@param: hw1_calculator_t* calculator
+@return: int count
+@return: enum error
+*/
 int hw1_calculator_minus_count( hw1_calculator_t *calculator){
 	if( calculator){
 		if( hw1_calculator_get_count( calculator) == 0){
@@ -60,6 +84,12 @@ int hw1_calculator_minus_count( hw1_calculator_t *calculator){
 	}
 }
 
+/*
+@brief: Get Calculator's data
+@param: hw1_calculator_t* calculator
+@return int data
+@return enum error
+*/
 int hw1_calculator_get_data( hw1_calculator_t *calculator){
 	if( calculator){
 		return calculator->data;
@@ -71,6 +101,13 @@ int hw1_calculator_get_data( hw1_calculator_t *calculator){
 	}
 }
 
+/*
+@brief: Processing Calculator's data
+@param: hw1_calculator_t* calculator
+@param: int data
+@return: int data
+@return: enum error
+*/
 int hw1_calculator_process_data( hw1_calculator_t *calculator, int data){
 	if( calculator){
 		int rv, temp_data;

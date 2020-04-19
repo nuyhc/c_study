@@ -3,6 +3,9 @@
 
 #include <stdio.h>
 
+/*
+@brief: # of errors
+*/
 typedef enum hw1_error_s hw1_error_t;
 enum hw1_error_s{
 	DATA_LESS = -4,
